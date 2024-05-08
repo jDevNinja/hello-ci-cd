@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: javac src/app/Main.java
-      - run: java -cp src Main
+      - run: java -cp ./src app.Main
   
   job_3:
     name: "The End"
