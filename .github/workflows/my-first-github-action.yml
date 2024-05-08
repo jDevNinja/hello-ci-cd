@@ -8,13 +8,16 @@ jobs:
     steps:
       - run: echo "Пайплайн запущен 🚀"
       - run: echo "Удачного прохождения!"
+        
   job_2:
     name: "Compilation"
     needs: job_1
     runs-on: ubuntu-latest
     container: openjdk:21
     steps:
+      - uses: actions/checkout@v3
       - run: javac src/app/Main.java
+        
   job_3:
     name: "Run"
     needs: job_2
@@ -22,6 +25,7 @@ jobs:
     container: openjdk:21
     steps:
       - run: java src/app/Main
+        
   job_4:
     name: "The End"
     needs: job_3
