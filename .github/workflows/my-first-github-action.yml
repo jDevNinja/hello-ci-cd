@@ -1,5 +1,5 @@
 name: My First GitHub Action
-run-name: ${{ github.actor }} is GitHub Actions
+run-name: ${{ github.actor }} is testing GitHub Actions
 on: [ push, workflow_call ]
 jobs:
   job_1:
