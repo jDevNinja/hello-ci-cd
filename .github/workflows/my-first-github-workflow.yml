@@ -1,6 +1,7 @@
-name: My First GitHub Action
+name: My First GitHub Workflow
 run-name: ${{ github.actor }} is testing GitHub Actions
-on: [ push, workflow_call ]
+on: [ push, workflow_dispatch ]
+
 jobs:
   job_1:
     name: "Bootstrap Greeting"
