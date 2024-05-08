@@ -1,17 +1,17 @@
-name: "My First GitHub Workflow"
+name: 'My First GitHub Workflow'
 run-name: ${{ github.actor }} is testing GitHub Actions
 on: [ push, workflow_dispatch ]
 
 jobs:
   job_1:
-    name: "Bootstrap Greeting"
+    name: 'Greeting'
     runs-on: ubuntu-latest
     steps:
       - run: echo "Пайплайн запущен 🚀"
       - run: echo "Удачного прохождения!"
   
   job_2:
-    name: "Compile And Run"
+    name: 'Compile And Run'
     needs: job_1
     runs-on: ubuntu-latest
     container: openjdk:21
@@ -21,10 +21,10 @@ jobs:
       - run: java -cp ./src app.Main
   
   job_3:
-    name: "The End"
+    name: 'The End'
     needs: job_2
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Пайплайн успешно завершен, всего хорошего 🤝"
+      - run: echo "Пайплайн успешно завершен, всего хорошего  🤝"
     
 
