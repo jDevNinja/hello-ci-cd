@@ -15,7 +15,6 @@ jobs:
     container: openjdk:21
     steps:
       - run: javac src/app/Main.java
-        uses: actions/checkout@v4
   job_3:
     name: "Run"
     needs: job_2
