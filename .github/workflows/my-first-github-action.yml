@@ -17,9 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: javac src/app/Main.java
-      - run: pwd
-      - run: ls
-      - run: java ./src/app/Main
+      - run: java -cp src Main
   
   job_3:
     name: "The End"
