@@ -4,6 +4,7 @@ on: [ push, workflow_call ]
 jobs:
   job_1:
     name: "Bootstrap Greeting"
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Пайплайн запущен 🚀"
       - run: echo "Удачного прохождения!"
