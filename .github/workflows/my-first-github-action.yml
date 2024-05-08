@@ -14,14 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     container: openjdk:21
     steps:
-      - run: javac Main.java
+      - run: javac src/app/Main.java
+        uses: actions/checkout@v4
   job_3:
     name: "Run"
     needs: job_2
     runs-on: ubuntu-latest
     container: openjdk:21
     steps:
-      - run: java Main
+      - run: java src/app/Main
   job_4:
     name: "The End"
     needs: job_3
